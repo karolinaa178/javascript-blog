@@ -43,7 +43,7 @@
 
   const optArticleSelector = '.post',
     optTitleSelector = '.post-title',
-    optTitleListSelector = '.title';
+    optTitleListSelector = '.titles';
 
   function generateTitleLinks() {
 
@@ -66,16 +66,17 @@
 
     /* get the title from the title element */
       const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
-    }
+  
     /* create HTML of the link */
       html = html + linkHTML;
+    }  
       titleList.innerHTML = html;
       
     /* insert link into titleList */
       const links = document.querySelectorAll('.titles a');
       for(let link of links) {
         link.addEventListener('click', titleClickHandler);
-      }
+    }
     
   }
   generateTitleLinks();
