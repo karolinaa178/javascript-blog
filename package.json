@@ -11,6 +11,7 @@
     "test": "npm-run-all test:*",
     "test:html": "html-validate *.html",
     "test:js": "eslint js/",
+    "test:scss": "stylelint sass/",
     "build": "npm-run-all build:* test",
     "build:sass": "node-sass --output-style compact -o css sass",
     "build:autoprefixer": "autoprefixer-cli css/style.css",
@@ -27,12 +28,15 @@
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.26.13",
     "browsersync": "0.0.1-security",
+    "editorconfig": "^0.15.3",
     "eslint": "^7.13.0",
     "eslint-watch": "^7.0.0",
     "html-validate": "^3.5.0",
     "mkdirp": "^1.0.4",
     "npm-run-all": "^4.1.5",
-    "onchange": "^7.1.0"
+    "onchange": "^7.1.0",
+    "stylelint": "^13.8.0",
+    "stylelint-scss": "^3.18.0"
   },
   "dependencies": {
     "node-sass": "^5.0.0"
