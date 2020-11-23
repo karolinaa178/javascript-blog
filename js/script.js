@@ -82,6 +82,7 @@
   generateTitleLinks();
 
   const generateTags = function() {
+
     /* find all articles */
     const articles = document.querySelectorAll(optArticleSelector);
   
@@ -98,18 +99,15 @@
       /* get tags from data-tags attribute */
       const articleTags = article.getAttribute('data-tags');
       console.log(articleTags);
-
       /* split tags into array */
       const articleTagsArray = articleTags.split('   ');
       console.log('articleTagsArray: ', articleTagsArray);
-  
       /* START LOOP: for each tag */
       for(let tag of articleTagsArray){
       /* generate HTML of the link */
-        const tagLink = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
+        const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
         /* add generated code to html variable */
-        html = html + tagLink;
-     
+        html = html + linkHTML;
       /* END LOOP: for each tag */
       }
       /* insert HTML of all the links into the tags wrapper */
@@ -179,7 +177,7 @@
       /* get tags from data-author attribute */
       const tagAuthor = article.getAttribute('data-author');
       /* generate HTML of the link */
-      const linkHTML = '<li><a href="#tag-author' + tagAuthor + '">' + tagAuthor + '</a></li>';
+      const linkHTML = '<li><a href="#author-' + tagAuthor + '">' + tagAuthor + '</a></li>';
       /* add generated code to html variable */
       html = html + linkHTML;
  
@@ -201,10 +199,10 @@
     const href = clickedElement.getAttribute('href');
 
     /* make a new constant "tag" and extract tag from the "href" constant */
-    const tag = href.replace('#tag-author', '');
+    const tag = href.replace('#author-', '');
 
     /* find all tag links with class active */
-    const activeAuthorLinks = document.querySelectorAll('a.active[href^="#tag-author"]');
+    const activeAuthorLinks = document.querySelectorAll('a.active[href^="#author-"]');
 
     /* START LOOP: for each active tag link */
     for(let activeAuthorLink of activeAuthorLinks){
@@ -226,7 +224,7 @@
 
   const addClickListenersToAuthors = function(){
   /* find all links to tags */
-    const linkAuthors = document.querySelectorAll('a[href^="#tag-author"]');
+    const linkAuthors = document.querySelectorAll('a[href^="#author-"]');
     /* START LOOP: for each link */
     for(let linkAuthor of linkAuthors){
     /* add tagClickHandler as event listener for that link */
