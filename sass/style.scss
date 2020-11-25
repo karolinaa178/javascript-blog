@@ -84,12 +84,14 @@ body {
   
   .active {
     font-weight: bold;
+    color: blue;
   }
 }
 
 .list-horizontal {
   li {
     display: inline-block;
+    margin-right: 5px;
   }
 }
 
@@ -121,4 +123,25 @@ body {
   p {
     margin: 0 10px 0 0;
   }
+}
+
+/* List tags */
+
+.tag-size-1 {
+  font-size: 100%;
+}
+.tag-size-2 {
+  font-size: 150%;
+}
+.tag-size-3 {
+  font-size: 200%;
+}
+.tag-size-4 {
+  font-size: 270%;
+}
+.tag-size-5 {
+  font-size: 370%;
+}
+.list.tags li {
+  display: inline-block;
 }
