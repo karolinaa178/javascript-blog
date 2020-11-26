@@ -112,23 +112,28 @@ body {
 
 /* List tags */
 .tag-size-1 {
-  font-size: 100%;
+  font-size: 12px;
+  text-decoration: none;
 }
 
 .tag-size-2 {
-  font-size: 150%;
+  font-size: 15px;
+  text-decoration: none;
 }
 
 .tag-size-3 {
-  font-size: 200%;
+  font-size: 17px;
+  text-decoration: none;
 }
 
 .tag-size-4 {
-  font-size: 270%;
+  font-size: 19px;
+  text-decoration: none;
 }
 
 .tag-size-5 {
-  font-size: 370%;
+  font-size: 26px;
+  text-decoration: none;
 }
 
 .list.tags li {
